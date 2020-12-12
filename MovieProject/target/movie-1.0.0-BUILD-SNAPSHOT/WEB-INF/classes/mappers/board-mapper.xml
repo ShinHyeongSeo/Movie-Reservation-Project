@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+	<insert id="insertBoard">
+		insert into MOVIE (username, phone, userid, password, seat)
+		values
+		(#{username}, #{phone}, #{userid}, #{password}, #{seat})
+	</insert>
+	<update id="updateBoard">
+		update MOVIE
+		set username=#{username}, phone=#{phone}, userid=#{userid}, password=#{password}, seat=#{seat}
+		where seq=#{seq}
+	</update>
+	<delete id="deleteBoard">
+		delete from MOVIE where seq=#{seq}
+	</delete>
+	<select id="getBoard" resultType="board">
+		select * from MOVIE where seq=#{seq}
+	</select>
+	<select id="getBoardSeat" resultType="board">
+		select * from MOVIE where seat=#{seat}
+	</select>
+	<select id="getBoardId" resultType="board">
+		select * from MOVIE where userid=#{userid}
+	</select>
+	
+	<select id="getBoardList" resultType="board">
+		select * from MOVIE order by seq desc
+	</select>
+</mapper>
