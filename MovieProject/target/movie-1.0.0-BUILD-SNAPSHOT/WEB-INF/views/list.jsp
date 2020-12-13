@@ -40,7 +40,7 @@
 </head>
 <body>
 <br>
-<h1 align = "center"><strong>MOVIE RESERVATION SERVICE</strong></h1>
+<h1 align = "center"><strong>SANG-SANG CINEMA</strong></h1>
 <br>
 <form:form method = "POST" modelAttribute = "u" action="add" id="seats">
 	<input id="a1" type="submit" name = "seat" value = "A1" class="btn btn-outline-primary">
